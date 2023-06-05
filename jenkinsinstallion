@@ -23,3 +23,13 @@ Start, Stop & Restart Jenkins
 $ sudo service jenkins restart
 $ sudo service jenkins stop
 $ sudo service jenkins start
+
+
+Java code 
+helloworld.java
+
+class Simple{  
+    public static void main(String args[]){  
+     System.out.println("Hello Students from Batch 30");  
+    }  
+} 
