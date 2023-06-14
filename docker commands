@@ -1,0 +1,125 @@
+sudo -i
+apt-get update
+apt install docker.io
+
+
+
+
+sudo apt-get update && sudo apt install docker.io -y
+
+
+docker pull hello-world
+
+
+-world   latest    9c7a54a9a43c   5 we
+
+docker pull --  pull the image 
+
+
+
+docker run ====  downlod the image and create a container 
+if image is already availabe it will crea a container  from client itself 
+
+	docker run -it ubuntu   
+	
+	docker exec -it f50cbe4f3b97 bin/bash
+	exit
+	
+	docker rmi  (imageid)
+	docker rm (container ID)
+	
+	linux
+	32gb ram -8 core processer     == 80 %  *
+  32gb ram -8 core proce
+  
+  
+  64gb ram 16 core processor
+
+docker imgaes
+docker pull nginx  
+
+docker run nginx
+docker run -p 80:80 nginx
+
+docker run --name docker-nginx -p 80:80 nginx
+
+
+
+mkdir -p ~/docker-nginx/html
+cd ~/docker-nginx/html
+vi index.html
+
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <title>Docker nginx Tutorial for batch-30</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello Learning team batch30 with atri , akshay, chitrika and prashant</h1>
+      <p>This nginx page is brought to you by Docker in front of anu , rahul batch30 students  </p>
+    </div>
+  </body>
+</html>
+
+
+docker run --name docker-nginx -p 80:80 nginx
+
+-d deattach 
+
+docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+
+
+
+root@instance-1:~/docker-nginx/html# history
+    1  ps
+    2  docker ps
+    3  docker ps -a
+    4  docker images
+    5  docker pull hello-world
+    6  docker images
+    7  docker ps -a
+    8  clear
+    9  docker run hello-world
+   10  docker ps
+   11  docker ps -a
+   12  docker images
+   13  docker run -it ubuntu
+   14  docker ps
+   15  docker ps -a
+   16  docker start f50cbe4f3b97
+   17  docker ps
+   18  docker exec -it f50cbe4f3b97 bin/bash
+   19  docker ps
+   20  docker images
+   21  docker rmi hello-world
+   22  docker rmi -f hello-world
+   23  docker images
+   24  docker ps
+   25  docker rm f50cbe4f3b97
+   26  docker rm -f f50cbe4f3b97
+   27  docker ps
+   28  docker imgaes
+   29  docker images
+   30  docker pull nginx
+   31  docker images
+   32  docker run nginx
+   33  docker run -p 80:80 nginx
+   34  docker ps -a
+   35  docker run --name docker-nginx -p 80:80 nginx
+   36  docker ps -a
+   37  docker ps
+   38  mkdir docker-nginx
+   39  ls
+   40  cd docker-nginx/
+   41  mkdir html
+   42  cd html/
+   43  ls
+   44  vi index.html
+   45  cat index.html 
+   46  docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+   47  docker ps -a
+   48  docker images
+   49  docker rm -f 1025ae2ddd36
+   50  docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+   51  history
