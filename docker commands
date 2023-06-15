@@ -123,3 +123,109 @@ root@instance-1:~/docker-nginx/html# history
    49  docker rm -f 1025ae2ddd36
    50  docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
    51  history
+   
+   
+   ----------------
+   
+   day 3 docker 
+   
+   sudo -i
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+sh get-docker.sh
+
+
+update pag
+java 11
+add repo 
+source add jenkins 
+apdtare packages 
+install jenins 
+
+docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+
+docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+
+
+cat /var/jenkins_home/secrets/initialAdminPassword
+
+
+
+
+os -vm  - ubuntu  
+update packages 
+apt install nginx -y
+systemstl start nginx 
+echo "image created"
+---------------
+
+
+
+
+FROM ubuntu
+MAINTAINER clouddevopshub@gmail.com
+RUN apt-get update
+RUN apt-get install nginx -y
+CMD [“echo”,”Image created”]
+
+docker build -t mynginxbatch30 .
+
+mynginxbatch30  = 075cc9deb5bf
+
+
+docker tag 075cc9deb5bf vikas4cloud/mynginxbatch30:latest
+
+
+
+
+
+
+
+   
+   root@instance-1:~/backup# history
+    1  ls
+    2  docker --version
+    3  ls
+    4  sh get-docker.sh
+    5  docker --version
+    6  docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+    7  ls
+    8  docker ps
+    9  cat /var/jenkins_home/secrets/initialAdminPassword
+   10  docker exec -it a3e74d8975bd bin/bash
+   11  ls
+   12  rm get-docker.sh 
+   13  ls
+   14  docker images
+   15  docker ps
+   16  docker rm -f a3e74d8975bd
+   17  docker ps
+   18  docker rmi jenkins/jenkins
+   19  docker images
+   20  ls
+   21  vi Dockerfile
+   22  cat Dockerfile 
+   23  docker images
+   24  docker build -t mynginxbatch30 .
+   25  docker images
+   26  docker login
+   27  docker tag 075cc9deb5bf vikas4cloud/mynginxbatch30:latest
+   28  docker images
+   29  docker push vikas4cloud/mynginxbatch30
+   30  docker pull vikas4cloud/mynginxbatch30
+   31  docker images
+   32  ls
+   33  mkdir backup
+   34  cd backup/
+   35  ls
+   36  docker save mynginxbatch30 > joybackup.tar
+   37  ls
+   38  docke rps
+   39  docker ps
+   40  docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+   41  docker ps
+   42  docker top e629d9476e69
+   43  docker logs e629d9476e69
+   44  docker stats e629d9476e69
+   45  docker inspect  e629d9476e69
