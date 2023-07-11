@@ -21,6 +21,22 @@ $ docker-compose --version
 
   ---------------------------
 
+Approach 3 :-   Install Splunk with Docker Compose 
+
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services
+
+https://github.com/immontilla/splunk 
+
+
+Git clone https://github.com/immontilla/splunk 
+
+export RANDOMPASS=`date +%s | sha256sum | base64 | head -c 32 ; echo`
+echo $RANDOMPASS
+docker-compose up -d
+
+check on browser with port 8000
+
+
 
 
   
