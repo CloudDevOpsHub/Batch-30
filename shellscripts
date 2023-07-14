@@ -1,0 +1,152 @@
+#!/bin/bash  
+echo "This is a shell script"  
+ls
+echo "I am done my first shell script in batch-30"
+touch pradeep
+ls  
+
+
+3rd 
+
+#!/bin/bash 
+echo "Hello there"
+echo "My name is $(whoami)"
+echo "Nice to meet you"
+
+root
+
+4th.sh
+
+#!/bin/bash  
+echo "This is a shell script"
+echo "the hostname 0f this machine is "
+hostname 
+hostname -i
+ps
+echo "memory used in the machine "
+free
+echo "disk used in the machine "
+df -h
+echo "the above information from the current machine"  
+a='ans given by pradeep'  
+echo "$SOMEVAR"
+
+---------------
+
+5th.sh
+
+#!/bin/bash
+# Add two numeric value
+((sum=10-5))
+#Print the result
+echo $sum
+
+15
+----
+5
+
+----6th 
+
+#!/bin/bash
+echo "Enter your email*"
+read name
+echo "Welcome $name to Linux Learning session for batch-30"
+
+
+-------------
+3 times   =--- for
+30 sec duration   -- sleep
+ps     - ps 
+
+
+--------------
+
+#!/bin/bash
+# Write a shell script to display the process running on the system for every
+# 30 seconds, but only for 3 times.
+# -------------------------------------------------------------------------
+# -------------------------------------------------------------------------
+# 
+# for loop 3 times
+
+
+ r in 1 2 3
+do
+	#see every process on the system
+	echo "**************************** x^x^x ****************************"
+	ps
+	echo "**************************** x^x^x ****************************"
+	#sleep for 30 seconds
+	sleep 30
+        # clean
+done
+
+
+---3rd big script 
+
+#!/bin/bash
+
+# Sample script to automate tasks:
+# -Update local file database:
+echo -e "\e[4;32mUPDATING LOCAL FILE DATABASE\e[0m"
+updatedb
+if [ $? == 0 ]; then
+        echo "The local file database was updated correctly."
+else
+        echo "The local file database was not updated correctly."
+fi
+echo ""
+
+# -Find and / or delete files with 777 permissions.
+echo -e "\e[4;32mLOOKING FOR FILES WITH 777 PERMISSIONS\e[0m"
+# Enable either option (comment out the other line), but not both.
+# Option 1: Delete files without prompting for confirmation. Assumes GNU version of find.
+#find -type f -perm 0777 -delete
+# Option 2: Ask for confirmation before deleting files. More portable across systems.
+find -type f -perm 0777 -exec rm -i {} +;
+echo ""
+# -Alert when file system usage surpasses a defined limit 
+echo -e "\e[4;32mCHECKING FILE SYSTEM USAGE\e[0m"
+THRESHOLD=30
+while read line; do
+        # This variable stores the file system path as a string
+        FILESYSTEM=$(echo $line | awk '{print $1}')
+        # This variable stores the use percentage (XX%)
+        PERCENTAGE=$(echo $line | awk '{print $5}')
+        # Use percentage without the % sign.
+        USAGE=${PERCENTAGE%?}
+        if [ $USAGE -gt $THRESHOLD ]; then
+                echo "The remaining available space in $FILESYSTEM is critically low. Used: $PERCENTAGE"
+        fi
+done < <(df -h --total | grep -vi filesystem)
+
+
+
+dbupdate
+rm 777 
+df -h
+
+----------
+
+-------
+
+
+https://github.com/ruanyf/simple-bash-scripts   
+
+https://linuxhint.com/30_bash_script_examples/
+
+https://towardsdatascience.com/8-bash-script-tips-for-automation-projects-2c63d8716f9a 
+
+https://www.ubuntupit.com/simple-yet-effective-linux-shell-script-examples/ 
+
+
+Writing a script to display system information
+https://www.tecmint.com/using-shell-script-to-automate-linux-system-maintenance-tasks/ 
+
+ wget https://tecmint.com/wp-content/scripts/tecmint_monitor.sh
+
+
+
+history | grep ls
+
+
