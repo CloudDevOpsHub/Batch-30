@@ -1,0 +1,73 @@
+sudo apt-get update &&  sudo apt install docker.io -y
+
+
+vi Dockerfile 
+
+from jenkins/jenkins:lts-jdk11
+USER root
+RUN apt-get update -qq \
+    && apt-get install -qqy apt-transport-https ca-certificates curl gnupg2 software-properties-common
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+RUN add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+RUN apt-get update  -qq \
+    && apt-get install docker.io -y
+RUN usermod -aG docker jenkins
+
+
+docker image build -t jenkins-docker .
+
+
+docker container run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock jenkins-docker
+
+
+docker images
+
+
+ERROR: No tool named maven-3.5.2 found
+Finished: FAILURE
+
+tool just setup  maven-3.5.2 
+
+--------------
+
++ docker tag c2805a545ae4 vickeyyvickey/myapplication
+Error response from daemon: No such image: c2805a545ae4:late
+
+--------
+
+CD
+
+node {
+   def dockerImageTag = "devopsexample${env.BUILD_NUMBER}"
+    stage('deploy command for deploy to 182')
+{
+        sh "docker images"
+        sh "docker rm -f devopsexample "
+        sh "docker run --name devopsexample -d -p 2222:2222 vickeyyvickey/myapplication:latest"
+        //-Completion
+        echo "--------------------------------------------------------"
+        echo "View App deployed here: http://server-ip:2222"
+        echo "--------------------------------------------------------"
+    }
+}
+
+
+----------------
+
+
+CI is oon 6th 
+
+latest: digest: sha256:d9a18819f3002bc6fde0765bb7afda9ffc598f7b1330476efd3dadd1efc69336 size: 1159
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+
+CD 1 time 
+
+Started by user admin
